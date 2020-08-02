@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration xmlns="http://www.jooq.org/xsd/jooq-codegen-3.12.0.xsd">
+    <jdbc>
+        <driver>org.postgresql.Driver</driver>
+        <url>jdbc:postgresql://localhost:5432/mealcord</url>
+        <user>postgres</user>
+        <password>123456</password>
+    </jdbc>
+
+    <generator>
+        <database>
+            <name>org.jooq.meta.postgres.PostgresDatabase</name>
+            <includes>.*</includes>
+            <inputSchema>public</inputSchema>
+        </database>
+        <generate>
+        </generate>
+        <target>
+            <packageName>com.divide2.jooq</packageName>
+            <directory>divide2-course/build/generated-sources</directory>
+        </target>
+    </generator>
+</configuration>

@@ -1,0 +1,47 @@
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+    url: ${DATASOURCE_URL}
+    hikari:
+      max-lifetime: 30000
+  jpa:
+    database-platform: POSTGRESQL
+    database: postgresql
+    properties:
+      hibernate:
+        dialect: com.divide2.config.dialect.PostgreSQLArrayDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  jooq:
+    sql-dialect: postgres
+  mail:
+    password: ${MAIL_PASSWORD}
+    username: ${MAIL_USERNAME}
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
+wechat:
+  appId: ${WECHAT_APP_ID}
+  appSecret: ${WECHAT_APP_SECRET}
+aliyun:
+  access-key-id: ${ALIYUN_ACCESS_KEY_ID}
+  access-key-secret: ${ALIYUN_ACCESS_KEY_SECRET}
+  oss:
+    end-point: ${ALIYUN_OSS_END_POINT}
+    bucket-name: ${ALIYUN_OSS_BUCKET_NAME}
+    file-host: ${ALIYUN_OSS_FILE_HOST}
+tencent:
+  map:
+    key: ${TENCENT_MAP_KEY}
+    secret: ${TENCENT_MAP_SECRET}
+logging:
+  file:
+    path: /logs
+server:
+  port: 80
