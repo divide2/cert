@@ -40,6 +40,7 @@ class SecurityConfig(
                         "/v1/operate/cities").permitAll()
                 .antMatchers(
                         HttpMethod.GET,
+                        "/v1/org/courses/*",
                         "/v1/articles",
                         "/v1/articles/*",
                         "/v1/tips",
