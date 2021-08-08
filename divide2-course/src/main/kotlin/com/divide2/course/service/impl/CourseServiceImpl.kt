@@ -110,6 +110,7 @@ class CourseServiceImpl(var courseRepository: CourseRepository,
 
     }
 
+    @Transactional
     override fun join(join: JoinDTO) {
         var uc = userCourseRepository.getByUserIdAndCourseId(join.userId, join.courseId)
         if (uc == null) {

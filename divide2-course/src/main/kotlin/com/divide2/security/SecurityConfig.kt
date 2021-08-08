@@ -41,6 +41,7 @@ class SecurityConfig(
                 .antMatchers(
                         HttpMethod.GET,
                         "/v1/org/courses/*",
+                        "/v1/org/courses/*/students",
                         "/v1/articles",
                         "/v1/articles/*",
                         "/v1/tips",

@@ -13,7 +13,7 @@ object Loginer {
     }
 
     fun isAuth(): Boolean {
-        return SecurityContextHolder.getContext().authentication.isAuthenticated
+        return SecurityContextHolder.getContext().authentication.isAuthenticated && !SecurityContextHolder.getContext().authentication.principal.equals("anonymousUser")
     }
 
     /**
