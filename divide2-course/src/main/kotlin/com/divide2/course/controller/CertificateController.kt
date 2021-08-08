@@ -46,7 +46,7 @@ class CertificateController(
         certificate.image = certificateDTO.image
         certificate.licensor = certificateDTO.licensor
         certificate.name = certificateDTO.name
-        certificateService.update(certificateDTO)
+        certificateService.update(certificate)
         return ResponseEntity.ok(certificate)
     }
 

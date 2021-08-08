@@ -46,4 +46,6 @@ interface UserService : IService<User, Int, UserRepository> {
      * 手机验证码登录
      */
     fun loginByPhone(phoneLogin: PhoneLogin): LoginVO
+
+    fun loginByWechat(wechatPhone: WechatPhone): LoginVO
 }

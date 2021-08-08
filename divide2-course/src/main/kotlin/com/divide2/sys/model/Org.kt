@@ -24,7 +24,7 @@ class Org(
         var isFavorite: Boolean = false,
         @JsonIgnore
         var password: String = "",
-        @JsonIgnore
+        @JsonView(OrgInfo::class)
         var license: String = "",
         @JsonView(OrgInfo::class)
         var status: String = "",

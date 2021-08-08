@@ -8,6 +8,7 @@ import com.divide2.core.token.StoreUser
 import com.divide2.core.token.TokenStore
 import com.divide2.course.controller.OrgLoginDTO
 import com.divide2.course.controller.RegDTO
+import com.divide2.course.model.AUDITING
 import com.divide2.course.model.User
 import com.divide2.exception.BadAuthenticationException
 import com.divide2.sys.model.Org
@@ -44,7 +45,7 @@ class OrgServiceImpl(
                 name = regDTO.username,
                 password = passwordEncoder.encode(regDTO.password),
                 license = regDTO.license,
-                status = "Auditing",
+                status = AUDITING,
                 contactUser = regDTO.contactUser,
                 contactWay = regDTO.contactWay,
                 address = regDTO.address,

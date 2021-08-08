@@ -54,6 +54,15 @@ class UserController(
         return ResponseEntity.created(URI("")).build()
     }
 
+    @ApiOperation("报名课程")
+    @PostMapping("/exit/{courseId}")
+    fun exit(@PathVariable courseId: Int): ResponseEntity<Any> {
+        val exit = JoinDTO(courseId, Loginer.getId())
+        courseService.exit(exit)
+        return ResponseEntity.created(URI("")).build()
+    }
+
+
     @ApiOperation("个人信息")
     @GetMapping
     @JsonView(User.UserVO::class)

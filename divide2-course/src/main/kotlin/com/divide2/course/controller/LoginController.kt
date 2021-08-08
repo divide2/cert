@@ -35,11 +35,11 @@ class LoginController(
         var verificationCodeManager: VerificationCodeManager
 ) {
 
-   /* @PostMapping("/login/wechat")
+    @PostMapping("/login/wechat")
     @ApiOperation("微信手机号登录")
-    fun wechatLogin(@RequestBody @Valid wechatPhone: WechatPhone): AccessToken {
-        val iv = wechatPhone.iv
-    }*/
+    fun wechatLogin(@RequestBody @Valid wechatPhone: WechatPhone): LoginVO {
+        return userService.loginByWechat(wechatPhone)
+    }
 
     @ApiOperation("手机号登录")
     @PostMapping("/login/phone")

@@ -21,7 +21,7 @@ interface CourseService : IService<Course, Int, CourseRepository> {
     /**
      * 查询创建的课程
      */
-    fun findByOrgId(userId: Int, pageable: Pageable, courseQuery: CourseQuery): Page<CourseVO>
+    fun findByOrgId(orgId: Int, pageable: Pageable, courseQuery: CourseQuery): Page<CourseVO>
 
     /**
      * 加入的课程
@@ -70,5 +70,6 @@ interface CourseService : IService<Course, Int, CourseRepository> {
     fun publish(courseId: Int)
 
     fun findByOrg(id: Int, pageable: Pageable): Page<CourseVO>
+    fun exit(exit: JoinDTO)
 
 }

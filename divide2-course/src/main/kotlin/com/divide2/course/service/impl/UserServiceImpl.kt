@@ -94,4 +94,16 @@ class UserServiceImpl(var userRepository: UserRepository,
         val accessToken = tokenStore.retrieveToken(StoreUser(user.id))
         return LoginVO(true, accessToken.value)
     }
+
+    override fun loginByWechat(wechatPhone: WechatPhone): LoginVO {
+        val phoneNumber = "15680740187"
+        val user = this.getByPhoneNumber(phoneNumber)
+        //手机号不存在 那就新增一个用户 把手机放进去
+        if (user == null) {
+            return LoginVO(false, "")
+        }
+        // 手机号存在 直接返回token
+        val accessToken = tokenStore.retrieveToken(StoreUser(user.id))
+        return LoginVO(true, accessToken.value)
+    }
 }

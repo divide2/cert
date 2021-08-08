@@ -1,6 +1,6 @@
 package com.divide2.course.model
 
-val FINISHED = "FINISHED"
-val AUDITING = "AUDITING"
-val DRAFT = "DRAFT"
-val PUBLISHED = "PUBLISHED"
+const val FINISHED = "FINISHED"
+const val AUDITING = "AUDITING"
+const val DRAFT = "DRAFT"
+const val PUBLISHED = "PUBLISHED"

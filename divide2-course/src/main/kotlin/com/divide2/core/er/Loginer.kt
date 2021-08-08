@@ -1,9 +1,6 @@
 package com.divide2.core.er
 
 import com.divide2.core.token.StoreUser
-import com.divide2.course.model.User
-import org.springframework.security.core.Authentication
-import org.springframework.security.core.context.SecurityContext
 import org.springframework.security.core.context.SecurityContextHolder
 
 object Loginer {
@@ -13,6 +10,10 @@ object Loginer {
      */
     fun getId(): Int {
         return loginer().id
+    }
+
+    fun isAuth(): Boolean {
+        return SecurityContextHolder.getContext().authentication.isAuthenticated
     }
 
     /**

@@ -1,8 +1,8 @@
 package com.divide2.course.dto
 
+import com.divide2.course.model.DRAFT
 import java.math.BigDecimal
 import java.time.LocalDate
-import java.time.LocalDateTime
 import javax.validation.constraints.NotEmpty
 import javax.validation.constraints.NotNull
 
@@ -40,6 +40,7 @@ data class CourseDTO(
         /**
          * 招收人数
          */
-        var capacity: Int = 0
+        var capacity: Int = 0,
+        var status: String = DRAFT
 
 )

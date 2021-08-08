@@ -34,5 +34,6 @@ class CourseVO {
     var enrolment: Int = 0
     var auditMessage: String = ""
     var status: String= ""
+    var joined: Boolean = false
 }
 
